@@ -2,13 +2,13 @@ import socket
 import termcolor
 
 
-
+#checks how many targets and ports needs to be scanned
 def scan(target, ports):
 	print('\n' + ' Starting Scan For ' + str(target))
 	for port in range(1, ports):
 		scan_port(target, port)
 
-
+#scanning the targets and prints their open ports with their banners
 def scan_port(ipaddress, port):
 	try:
 		sock = socket.socket()
